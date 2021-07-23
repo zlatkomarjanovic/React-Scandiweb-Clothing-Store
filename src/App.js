@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Navbar from "./components/Navbar/Navbar";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import React, { Fragment, useEffect } from "react";
+import Men from "./components/Pages/Men/Men";
+import Women from "./components/Pages/Women/Women";
+import Kids from "./components/Pages/Kids/Kids";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => {
+	useEffect(() => {});
+
+	return (
+		<Fragment>
+			<Router>
+				<Navbar />
+
+				<Switch>
+					<Route exact path='/women' component={Women} />
+					<Route exact path='/men' component={Men} />
+					<Route exact path='/kids' component={Kids} />
+				</Switch>
+			</Router>
+		</Fragment>
+	);
+};
 
 export default App;

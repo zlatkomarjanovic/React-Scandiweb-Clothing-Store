@@ -159,3 +159,40 @@ header {
 .separate {
 	margin-left: 4rem;
 }
+
+/*Tech part container*/
+
+.grid_container {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+	grid-gap: 4rem;
+	direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 2rem;
+	margin: 2rem;
+}
+
+.single_item {
+	width: 23rem;
+	height: 23rem;
+	padding: 1.5rem;
+	margin: auto;
+	object-fit: cover;
+}
+
+.single_item h3 {
+	font-weight: 100;
+}
+
+.single_item:hover {
+	box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+		rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+		rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+	transition: 0.5s ease-in-out;
+	cursor: pointer;
+}
+
+.single_item img {
+	width: 15rem;
+}

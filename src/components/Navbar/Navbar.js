@@ -17,8 +17,8 @@ const Navbar = () => {
 				</div>
 
 				<ul className='nav_links_1'>
-					<NavLink exact to='/women' className='nav-links'>
-						Women
+					<NavLink exact to='/tech' className='nav-links'>
+						Tech
 					</NavLink>
 
 					<NavLink exact to='/men' className='nav-links'>

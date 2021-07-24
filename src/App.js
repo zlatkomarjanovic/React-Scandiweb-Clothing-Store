@@ -2,9 +2,9 @@ import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import React, { Fragment, useEffect } from "react";
-import Men from "./components/Pages/Men/Men";
+import Clothes from "./components/Pages/Clothes/Clothes";
 import Tech from "./components/Pages/Tech/Tech";
-import Kids from "./components/Pages/Kids/Kids";
+
 import {
 	ApolloClient,
 	InMemoryCache,
@@ -38,9 +38,9 @@ const App = () => {
 					<Navbar />
 
 					<Switch>
+						<Route exact path='/' component={Tech} />
 						<Route exact path='/tech' component={Tech} />
-						<Route exact path='/men' component={Men} />
-						<Route exact path='/kids' component={Kids} />
+						<Route exact path='/clothes' component={Clothes} />
 					</Switch>
 				</Router>
 			</ApolloProvider>

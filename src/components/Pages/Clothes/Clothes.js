@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { gql, useQuery } from "@apollo/client";
 import { getDataFromTree } from "@apollo/react-ssr";
 import RenderItem from "../RenderItem";
-const Tech = () => {
+const Clothes = () => {
 	const GET_DATA = gql`
 		query {
 			categories {
@@ -32,16 +32,21 @@ const Tech = () => {
 	const [stuff, setStuff] = useState([]);
 	useEffect(() => {
 		if (data) {
-			setStuff(data.categories[1].products);
-			console.log(data.categories[1].products[1]);
+			setStuff(data.categories[0].products);
+			console.log(data.categories[0].products[1]);
 		}
 	}, [data]);
+
+	stuff.map((val1) => {
+		return console.log(val1.gallery[0]);
+	});
 
 	return (
 		<div className='grid_container'>
 			{stuff.map((val) => {
 				return (
 					<RenderItem
+						brand={val.brand}
 						image={val.gallery[0]}
 						name={val.name}
 						currency={val.prices[0].currency}
@@ -53,4 +58,4 @@ const Tech = () => {
 	);
 };
 
-export default Tech;
+export default Clothes;

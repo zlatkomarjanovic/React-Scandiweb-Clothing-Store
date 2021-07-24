@@ -21,12 +21,8 @@ const Navbar = () => {
 						Tech
 					</NavLink>
 
-					<NavLink exact to='/men' className='nav-links'>
-						Men
-					</NavLink>
-
-					<NavLink exact to='/kids' className='nav-links'>
-						Kids
+					<NavLink exact to='/clothes' className='nav-links'>
+						Clothes
 					</NavLink>
 				</ul>
 			</nav>

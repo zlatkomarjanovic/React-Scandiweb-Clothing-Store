@@ -1,8 +1,16 @@
 import React from "react";
 
-const RenderItem = ({ image, name, currency, amount, brand }) => {
+const RenderItem = ({
+	image,
+	name,
+	currency,
+	amount,
+	brand,
+	viewItemInfo,
+	id,
+}) => {
 	return (
-		<div className='single_item'>
+		<div onClick={() => viewItemInfo(id)} className='single_item'>
 			<img alt={name} src={image} />
 			<h3>
 				{brand} {name}

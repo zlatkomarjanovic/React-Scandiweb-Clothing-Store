@@ -85,7 +85,8 @@ header {
 
 .nav > .nav_links_1 > a:hover {
 	border-bottom: var(--primarycolor) 3px solid;
-	transition: 0.2s ease-in-out;
+	transition: 0.2s all ease-in-out;
+	-webkit-transition: 0.5s all ease;
 	color: var(--primarycolor);
 }
 
@@ -202,4 +203,38 @@ header {
 	width: 15rem;
 	height: 15rem;
 	object-fit: cover;
+}
+
+/*Item details*/
+
+.item_details_container {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 6rem;
+	direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 2rem;
+	margin: 2rem;
+}
+
+.item_details_container img {
+	width: 30rem;
+}
+
+/*Buttons*/
+
+.button {
+	cursor: pointer;
+	border: none;
+	background-color: var(--primarycolor);
+	font-size: 1rem;
+	padding: 1rem;
+	margin: 1rem;
+	width: 250px;
+	height: 50px;
+	justify-content: center;
+	text-align: center;
+	font-weight: bold;
+	color: white;
 }

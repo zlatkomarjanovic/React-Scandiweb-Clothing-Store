@@ -13,6 +13,7 @@ import {
 	from,
 } from "@apollo/client";
 import { onError } from "@apollo/client/link/error";
+import All from "./components/Pages/All/All";
 
 const errorLink = onError(({ graphqlErrors, networkError }) => {
 	if (graphqlErrors) {
@@ -38,6 +39,7 @@ const App = () => {
 					<Navbar />
 
 					<Switch>
+						<Route exact path='/all' component={All} />
 						<Route exact path='/' component={Tech} />
 						<Route exact path='/tech' component={Tech} />
 						<Route exact path='/clothes' component={Clothes} />

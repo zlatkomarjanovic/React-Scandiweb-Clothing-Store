@@ -20,14 +20,23 @@ const ItemDetails = (props) => {
 			</div>
 
 			<div>
-				<h1>{name}</h1>
+				<h1 style={{ marginBottom: "4rem" }}>{name}</h1>
 				<h3>PRICE : </h3>
-				<h2>
+				<h2 style={{ marginBottom: "4rem" }}>
 					{props.currentItem.prices[0].currency}{" "}
 					{props.currentItem.prices[0].amount}
 				</h2>
-				<button className='button'> Add to Cart </button> <br />
-				{description}
+				{inStock ? (
+					<button className='button' style={{ marginBottom: "4rem" }}>
+						Add to Cart
+					</button>
+				) : (
+					<h3 className='red' style={{ marginBottom: "4rem" }}>
+						<i className='far fa-times-circle'></i>Out of stock
+					</h3>
+				)}
+				<br />
+				<p style={{ marginBottom: "4rem" }}>{description}</p>
 			</div>
 		</Fragment>
 	);

@@ -24,6 +24,9 @@ const Navbar = () => {
 					<NavLink exact to='/clothes' className='nav-links'>
 						Clothes
 					</NavLink>
+					<NavLink exact to='/all' className='nav-links'>
+						All
+					</NavLink>
 				</ul>
 			</nav>
 			<span className='nav-links'>

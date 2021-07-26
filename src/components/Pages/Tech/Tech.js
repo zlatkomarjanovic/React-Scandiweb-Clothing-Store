@@ -64,6 +64,7 @@ const Tech = () => {
 								currency={val.prices[0].currency}
 								amount={val.prices[0].amount}
 								viewItemInfo={viewItemInfo}
+								inStock={val.inStock}
 								id={val.id}
 								item={val}
 								{...stuff}

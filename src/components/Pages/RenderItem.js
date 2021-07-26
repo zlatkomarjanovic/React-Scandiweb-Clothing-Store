@@ -4,7 +4,7 @@ const RenderItem = ({
 	image,
 	name,
 	currency,
-	amount,
+	price,
 	brand,
 	viewItemInfo,
 	id,
@@ -22,7 +22,7 @@ const RenderItem = ({
 						</h3>
 						<h3>
 							<span style={{ fontWeight: "bold" }}>
-								{currency} {amount}
+								{currency} {price}
 							</span>
 						</h3>
 					</div>
@@ -39,7 +39,7 @@ const RenderItem = ({
 					</h3>
 					<h3>
 						<span style={{ fontWeight: "bold" }}>
-							{currency} {amount}
+							{currency} {price}
 						</span>
 					</h3>
 				</div>

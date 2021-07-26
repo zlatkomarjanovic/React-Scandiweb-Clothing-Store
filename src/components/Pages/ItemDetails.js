@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 import { useCart } from "react-use-cart";
 
 const ItemDetails = (props) => {
-	const { id, name, gallery, description, inStock } = props.currentItem;
+	const { price, name, gallery, description, inStock } = props.currentItem;
 	const { addItem } = useCart();
 
 	console.log(props.currentItem);

@@ -62,7 +62,7 @@ const Tech = () => {
 								image={val.gallery[0]}
 								name={val.name}
 								currency={val.prices[0].currency}
-								amount={val.prices[0].amount}
+								price={val.prices[0].amount}
 								viewItemInfo={viewItemInfo}
 								inStock={val.inStock}
 								id={val.id}
@@ -75,6 +75,7 @@ const Tech = () => {
 			) : (
 				<div className='item_details_container'>
 					<ItemDetails
+						price={currentItem.prices.amount}
 						currentItem={currentItem}
 						closeItemInfo={closeItemInfo}
 						products={stuff}

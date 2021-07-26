@@ -14,6 +14,8 @@ import {
 } from "@apollo/client";
 import { onError } from "@apollo/client/link/error";
 import All from "./components/Pages/All/All";
+import Cart from "./components/Pages/Cart/Cart";
+import { CartProvider } from "react-use-cart";
 
 const errorLink = onError(({ graphqlErrors, networkError }) => {
 	if (graphqlErrors) {
@@ -34,18 +36,21 @@ const App = () => {
 
 	return (
 		<Fragment>
-			<ApolloProvider client={client}>
-				<Router>
-					<Navbar />
+			<CartProvider>
+				<ApolloProvider client={client}>
+					<Router>
+						<Navbar />
 
-					<Switch>
-						<Route exact path='/all' component={All} />
-						<Route exact path='/' component={Tech} />
-						<Route exact path='/tech' component={Tech} />
-						<Route exact path='/clothes' component={Clothes} />
-					</Switch>
-				</Router>
-			</ApolloProvider>
+						<Switch>
+							<Route exact path='/all' component={All} />
+							<Route exact path='/' component={Tech} />
+							<Route exact path='/tech' component={Tech} />
+							<Route exact path='/clothes' component={Clothes} />
+							<Route exact path='/cart' component={Cart} />
+						</Switch>
+					</Router>
+				</ApolloProvider>
+			</CartProvider>
 		</Fragment>
 	);
 };

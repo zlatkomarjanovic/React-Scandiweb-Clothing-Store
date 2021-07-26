@@ -1,7 +1,9 @@
 import React, { Fragment } from "react";
+import { useCart } from "react-use-cart";
 
 const ItemDetails = (props) => {
 	const { id, name, gallery, description, inStock } = props.currentItem;
+	const { addItem } = useCart();
 
 	console.log(props.currentItem);
 	return (
@@ -27,7 +29,11 @@ const ItemDetails = (props) => {
 					{props.currentItem.prices[0].amount}
 				</h2>
 				{inStock ? (
-					<button className='button' style={{ marginBottom: "4rem" }}>
+					<button
+						onClick={() => addItem(props.currentItem)}
+						className='button'
+						style={{ marginBottom: "4rem" }}
+					>
 						Add to Cart
 					</button>
 				) : (

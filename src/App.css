@@ -210,16 +210,48 @@ header {
 .item_details_container {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	grid-gap: 6rem;
+	grid-gap: 12rem;
 	direction: column;
-	justify-content: center;
-	align-items: center;
-	padding: 2rem;
+	padding: 5rem;
 	margin: 2rem;
+	width: 70%;
 }
 
 .item_details_container img {
 	width: 30rem;
+}
+.details_gallery {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	flex-direction: row;
+	float: left;
+	align-items: flex-start;
+	margin: 1rem;
+}
+
+.details_gallery img {
+	width: 7rem;
+	height: 7rem;
+	object-fit: cover;
+	margin: 1rem;
+}
+
+.details_gallery_hover {
+	transition: 0.5s ease-in-out;
+}
+
+.details_gallery_hover:hover {
+	transform: scale(3);
+	transition: 0.5s ease-in-out;
+	display: absolute;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	background-color: #f0f0f0;
+	left: auto;
+	box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+		rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+		rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 /*Buttons*/
@@ -230,7 +262,6 @@ header {
 	background-color: var(--primarycolor);
 	font-size: 1rem;
 	padding: 1rem;
-	margin: 1rem;
 	width: 250px;
 	height: 50px;
 	justify-content: center;

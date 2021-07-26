@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 
 const ItemDetails = (props) => {
-	const { id, name, price, gallery } = props.currentItem;
+	const { id, name, gallery, description, inStock } = props.currentItem;
 
 	console.log(props.currentItem);
 	return (
@@ -11,11 +11,24 @@ const ItemDetails = (props) => {
 					<i className='fa fa-arrow-left'> </i>
 					Go Back
 				</div>
-
-				<img alt={name} src={gallery} />
-				<h3>{name}</h3>
+				<img alt={name} src={gallery[0]} />
+				<div className='details_gallery'>
+					<img className='details_gallery_hover' alt={name} src={gallery[1]} />
+					<img className='details_gallery_hover' alt={name} src={gallery[2]} />
+					<img className='details_gallery_hover' alt={name} src={gallery[3]} />
+				</div>
 			</div>
-			<div>fdasds</div>
+
+			<div>
+				<h1>{name}</h1>
+				<h3>PRICE : </h3>
+				<h2>
+					{props.currentItem.prices[0].currency}{" "}
+					{props.currentItem.prices[0].amount}
+				</h2>
+				<button className='button'> Add to Cart </button> <br />
+				{description}
+			</div>
 		</Fragment>
 	);
 };

@@ -17,6 +17,7 @@ const Tech = () => {
 						currency
 					}
 					inStock
+					description
 					attributes {
 						id
 						name
@@ -41,12 +42,9 @@ const Tech = () => {
 	}, [data]);
 
 	const viewItemInfo = (id) => {
-		const filteredItem = stuff.filter(
-			(stuffitem) => stuffitem.attributes.id === id
-		);
+		const filteredItem = stuff.filter((stuffitem) => stuffitem.id === id);
 		const newCurrentItem = filteredItem.length > 0 ? filteredItem[0] : null;
 		setCurrentItem(newCurrentItem);
-		console.log(newCurrentItem);
 	};
 
 	const closeItemInfo = () => {
@@ -66,7 +64,7 @@ const Tech = () => {
 								currency={val.prices[0].currency}
 								amount={val.prices[0].amount}
 								viewItemInfo={viewItemInfo}
-								key={val.attributes.id}
+								id={val.id}
 								item={val}
 								{...stuff}
 							/>

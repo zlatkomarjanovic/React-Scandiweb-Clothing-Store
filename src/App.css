@@ -303,9 +303,27 @@ header {
 
 .cart_container {
 	padding: 3rem;
+	width: 100%;
 }
 
-/*Buttons*/
+.cart_container_img {
+	width: 10rem;
+	height: 10rem;
+	float: right;
+	display: block;
+	object-fit: cover;
+}
+
+.table {
+	width: 100%;
+	padding: 1rem;
+	margin-top: 4rem;
+}
+/*Buttons and other*/
+
+.line {
+	width: 100%;
+}
 
 .button {
 	cursor: pointer;
@@ -337,4 +355,42 @@ header {
 	width: 10rem;
 	color: white;
 	border-radius: 10rem;
+}
+
+.add_remove {
+	font-size: 1.5rem;
+	font-weight: 100;
+	border: 1px black solid;
+	background-color: white;
+	width: 2.2rem;
+	height: 2.2rem;
+	color: black;
+	transition: 0.2s ease-in-out;
+	margin-bottom: 2rem;
+}
+
+.add_remove:hover {
+	background-color: black;
+	color: white;
+	transition: 0.2s ease-in-out;
+}
+
+.horizontal_button {
+	width: 6rem;
+	height: 2rem;
+	font-size: 0.8rem;
+	background-color: black;
+	color: white;
+	border: none;
+	transition: 0.2s ease-in-out;
+	margin-top: 3rem;
+}
+
+.horizontal_button:hover {
+	transition: 0.2s ease-in-out;
+	background-color: #262626;
+}
+.buttons {
+	display: inline-block;
+	margin-right: 1rem;
 }

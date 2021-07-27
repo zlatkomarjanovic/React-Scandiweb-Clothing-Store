@@ -2,7 +2,8 @@ import React, { Fragment } from "react";
 import { useCart } from "react-use-cart";
 
 const ItemDetails = (props) => {
-	const { price, name, gallery, description, inStock } = props.currentItem;
+	const { price, name, gallery, description, inStock, brand } =
+		props.currentItem;
 	const { addItem } = useCart();
 
 	const cartItem = {
@@ -10,6 +11,8 @@ const ItemDetails = (props) => {
 		name: props.currentItem.name,
 		price: props.currentItem.prices[0].amount,
 		image: props.currentItem.gallery[0],
+		currency: props.currentItem.prices[0].currency,
+		brand: props.currentItem.brand,
 	};
 
 	console.log(cartItem);
@@ -29,7 +32,9 @@ const ItemDetails = (props) => {
 			</div>
 
 			<div>
-				<h1 style={{ marginBottom: "4rem" }}>{name}</h1>
+				<h1 style={{ marginBottom: "4rem" }}>
+					{brand} {name}
+				</h1>
 				<h3>PRICE : </h3>
 				<h2 style={{ marginBottom: "4rem" }}>
 					{props.currentItem.prices[0].currency}{" "}

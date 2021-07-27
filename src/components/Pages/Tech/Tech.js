@@ -79,6 +79,7 @@ const Tech = () => {
 						currentItem={currentItem}
 						closeItemInfo={closeItemInfo}
 						products={stuff}
+						item={currentItem}
 						{...stuff}
 					/>
 				</div>

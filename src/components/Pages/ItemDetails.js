@@ -5,7 +5,14 @@ const ItemDetails = (props) => {
 	const { price, name, gallery, description, inStock } = props.currentItem;
 	const { addItem } = useCart();
 
-	console.log(props.currentItem);
+	const cartItem = {
+		id: props.currentItem.id,
+		name: props.currentItem.name,
+		price: props.currentItem.prices[0].amount,
+		image: props.currentItem.gallery[0],
+	};
+
+	console.log(cartItem);
 	return (
 		<Fragment>
 			<div>
@@ -30,7 +37,7 @@ const ItemDetails = (props) => {
 				</h2>
 				{inStock ? (
 					<button
-						onClick={() => addItem(props.currentItem)}
+						onClick={() => addItem(cartItem)}
 						className='button'
 						style={{ marginBottom: "4rem" }}
 					>

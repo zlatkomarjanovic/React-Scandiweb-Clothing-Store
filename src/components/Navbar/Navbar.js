@@ -37,7 +37,9 @@ const Navbar = () => {
 					<i className='fas fa-dollar-sign nav_icons'></i>
 				</span>
 				<span className='nav-links right'>
-					<i className='fas fa-shopping-cart nav_icons '></i>
+					<NavLink exact to='/cart'>
+						<i className='fas fa-shopping-cart nav_icons '></i>
+					</NavLink>
 				</span>
 			</div>
 		</header>

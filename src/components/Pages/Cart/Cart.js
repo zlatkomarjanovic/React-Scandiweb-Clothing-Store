@@ -14,7 +14,11 @@ const Cart = (props) => {
 	} = useCart();
 
 	if (isEmpty) {
-		return <h1>Your Cart is Empty</h1>;
+		return (
+			<div className='empty_cart'>
+				<img src='https://www.no-fea.com/front/images/empty-cart.png' />
+			</div>
+		);
 	}
 	return (
 		<Fragment>

@@ -1,5 +1,7 @@
 import React, { Fragment } from "react";
 import { useCart } from "react-use-cart";
+import MiniCart from "./Cart/MiniCart";
+import { Link } from "react-router-dom";
 
 const ItemDetails = (props) => {
 	const { price, name, gallery, description, inStock, brand } =
@@ -41,13 +43,15 @@ const ItemDetails = (props) => {
 					{props.currentItem.prices[0].amount}
 				</h2>
 				{inStock ? (
-					<button
-						onClick={() => addItem(cartItem)}
-						className='button'
-						style={{ marginBottom: "4rem" }}
-					>
-						Add to Cart
-					</button>
+					<Link to='/cart'>
+						<button
+							onClick={() => addItem(cartItem)}
+							className='button'
+							style={{ marginBottom: "4rem" }}
+						>
+							Add to Cart
+						</button>
+					</Link>
 				) : (
 					<h3 className='red' style={{ marginBottom: "4rem" }}>
 						<i className='far fa-times-circle'></i>Out of stock

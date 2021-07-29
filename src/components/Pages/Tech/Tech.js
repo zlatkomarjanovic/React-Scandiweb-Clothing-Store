@@ -3,6 +3,7 @@ import { gql, useQuery } from "@apollo/client";
 import { getDataFromTree } from "@apollo/react-ssr";
 import RenderItem from "../RenderItem";
 import ItemDetails from "../ItemDetails";
+import MiniCart from "../Cart/MiniCart";
 const Tech = () => {
 	const GET_DATA = gql`
 		query {
@@ -54,6 +55,7 @@ const Tech = () => {
 
 	return (
 		<Fragment>
+			<MiniCart />
 			{currentItem === null ? (
 				<div className='grid_container'>
 					{stuff.map((val) => {

@@ -1,8 +1,10 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
 import { NavLink } from "react-router-dom";
 import logo from "../Logo/logo.png";
+import MiniCart from "../Pages/Cart/MiniCart";
 
 const Navbar = () => {
+	const [minicartIsOpen, setMiniCart] = useState(false);
 	return (
 		<header className='container'>
 			<nav className='nav'>
@@ -37,11 +39,12 @@ const Navbar = () => {
 					<i className='fas fa-dollar-sign nav_icons'></i>
 				</span>
 				<span className='nav-links right'>
-					<NavLink exact to='/cart'>
-						<i className='fas fa-shopping-cart nav_icons '></i>
-					</NavLink>
+					<span onClick={() => setMiniCart(true)}>
+						<i className='fas fa-shopping-cart nav_icons cart_icon '></i>
+					</span>
 				</span>
 			</div>
+			<MiniCart minicartIsOpen={minicartIsOpen} setMiniCart={setMiniCart} />
 		</header>
 	);
 };

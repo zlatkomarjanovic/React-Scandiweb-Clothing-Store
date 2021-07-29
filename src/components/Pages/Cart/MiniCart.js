@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import { useCart } from "react-use-cart";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import Modal from "react-modal";
 const MiniCart = ({ minicartIsOpen, setMiniCart }) => {
 	const {
@@ -17,19 +17,27 @@ const MiniCart = ({ minicartIsOpen, setMiniCart }) => {
 	return (
 		<Modal className='mini_cart' isOpen={minicartIsOpen}>
 			<div id='minicart' className='mini_cart_container'>
-				<h2>Your Mini Cart</h2>
+				<h2>
+					My bag{" "}
+					<span style={{ fontWeight: "lighter" }}> {totalItems} items</span>
+				</h2>{" "}
+				<button className='close_button' onClick={() => setMiniCart(false)}>
+					{" "}
+					X{" "}
+				</button>
 				<table className='table'>
 					<tbody>
 						{items.map((item, index) => {
 							return (
 								<Fragment>
-									<td>
-										<hr className='line' />
-									</td>
+									<td></td>
 									<tr>
 										<td style={{ display: "inline-block" }}>
-											<h2>{item.brand}</h2>
-											<h2>{item.name}</h2> <br />
+											<h4 style={{ fontWeight: "lighter" }}>{item.brand}</h4>
+											<h4 style={{ fontWeight: "lighter" }}>
+												{item.name}
+											</h4>{" "}
+											<br />
 											<span style={{ fontWeight: "bold", marginBottom: 3 }}>
 												{item.currency} {item.price}
 											</span>
@@ -42,7 +50,7 @@ const MiniCart = ({ minicartIsOpen, setMiniCart }) => {
 										>
 											<div className='buttons'>
 												<button
-													className='add_remove'
+													className='add_remove_mini '
 													onClick={() =>
 														updateItemQuantity(item.id, item.quantity + 1)
 													}
@@ -62,7 +70,7 @@ const MiniCart = ({ minicartIsOpen, setMiniCart }) => {
 												</p>
 												<br />
 												<button
-													className='add_remove'
+													className='add_remove_mini '
 													onClick={() =>
 														updateItemQuantity(item.id, item.quantity - 1)
 													}
@@ -73,7 +81,7 @@ const MiniCart = ({ minicartIsOpen, setMiniCart }) => {
 											</div>
 
 											<img
-												className='cart_container_img'
+												className='mini_cart_container_img'
 												alt={item.name}
 												src={item.image}
 											/>
@@ -84,7 +92,18 @@ const MiniCart = ({ minicartIsOpen, setMiniCart }) => {
 						})}
 					</tbody>
 				</table>
-				<button onClick={() => setMiniCart(false)}>Close me</button>
+				<div style={{ alignItems: "center", justifyContent: "center" }}>
+					<NavLink exact to='/cart'>
+						<button
+							onClick={() => setMiniCart(false)}
+							className='view_bag_button'
+						>
+							View Bag
+						</button>
+					</NavLink>
+					<button className='button_mini_checkout'>Checkout</button>
+				</div>
+				<h3>TOTAL : {cartTotal}</h3>
 			</div>
 		</Modal>
 	);

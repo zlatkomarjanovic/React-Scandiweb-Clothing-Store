@@ -344,9 +344,21 @@ header {
 	border: none;
 }
 
+.mini_cart_container_img {
+	width: 5rem;
+	height: 7rem;
+	float: right;
+	display: block;
+	object-fit: cover;
+	justify-content: center;
+	align-items: center;
+}
+
 .mini_cart_container {
 	padding: 0.5rem;
 	width: 100%;
+	justify-content: center;
+	align-items: center;
 }
 
 .modal:active {
@@ -427,4 +439,80 @@ header {
 .buttons {
 	display: inline-block;
 	margin-right: 1rem;
+}
+
+.close_button {
+	border: 1px solid black;
+	background-color: white;
+	width: 2rem;
+	height: 2rem;
+	float: right;
+	cursor: pointer;
+	margin-top: -30px;
+	transition: 0.5s ease-in-out;
+}
+
+.close_button:hover {
+	background-color: black;
+	color: white;
+	transition: 0.5s ease-in-out;
+	font-weight: bold;
+}
+
+.add_remove_mini {
+	font-size: 0.8rem;
+	font-weight: 100;
+	border: 1px black solid;
+	background-color: white;
+	width: 1.5rem;
+	height: 1.5rem;
+	color: black;
+	transition: 0.2s ease-in-out;
+	margin-bottom: 1rem;
+}
+
+.add_remove_mini:hover {
+	background-color: black;
+	color: white;
+	transition: 0.2s ease-in-out;
+}
+
+.view_bag_button {
+	border: 1px solid black;
+	background-color: white;
+	width: 8rem;
+	height: 2.5rem;
+	cursor: pointer;
+	margin-right: 1.8rem;
+	transition: 0.5s ease-in-out;
+}
+
+.view_bag_button:hover {
+	background-color: black;
+	color: white;
+	transition: 0.5s ease-in-out;
+	font-weight: bold;
+}
+
+.button_mini_checkout {
+	cursor: pointer;
+	border: none;
+	background-color: var(--primarycolor);
+
+	width: 8rem;
+	height: 2.5rem;
+	justify-content: center;
+	text-align: center;
+	font-weight: bold;
+	color: white;
+}
+
+.cart_icon {
+	transition: 1s ease-in-out;
+	cursor: pointer;
+}
+
+.cart_icon:hover {
+	transform: scale(1.5);
+	transition: 1s ease-in-out;
 }

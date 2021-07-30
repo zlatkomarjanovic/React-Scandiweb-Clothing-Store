@@ -101,6 +101,7 @@ header {
 		position: absolute;
 		right: 0px;
 		top: 0px;
+		margin-right: 10rem;
 	}
 	.nav > .nav-btn > label {
 		display: inline-block;
@@ -333,7 +334,7 @@ header {
 	height: 30rem;
 	width: 20rem;
 	overflow: scroll;
-
+	z-index: 9999;
 	float: right;
 	margin-right: 10rem;
 	margin-top: 3.5rem;
@@ -342,6 +343,7 @@ header {
 		rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 	background-color: white;
 	border: none;
+	transition: 1s ease-in-out;
 }
 
 .mini_cart_container_img {
@@ -363,6 +365,23 @@ header {
 
 .modal:active {
 	border: none;
+}
+
+.mini_cart_currency {
+	height: 15rem;
+	width: 10rem;
+	overflow: scroll;
+	z-index: 9999;
+	float: right;
+	margin-right: 10rem;
+	margin-top: 3.5rem;
+	box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+		rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+		rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+	background-color: white;
+	border: none;
+	transition: 1s ease-in-out;
+	overflow: hidden;
 }
 
 /*Buttons and other*/
@@ -508,11 +527,35 @@ header {
 }
 
 .cart_icon {
-	transition: 1s ease-in-out;
+	transition: 0.5s ease-in-out;
 	cursor: pointer;
 }
 
 .cart_icon:hover {
 	transform: scale(1.5);
-	transition: 1s ease-in-out;
+	transition: 0.5s ease-in-out;
+}
+
+.close_button_curr {
+	border: 1px solid black;
+	background-color: white;
+	width: 2rem;
+	height: 2rem;
+	float: right;
+	cursor: pointer;
+
+	transition: 0.5s ease-in-out;
+}
+
+.close_button_curr:hover {
+	background-color: black;
+	color: white;
+	transition: 0.5s ease-in-out;
+	font-weight: bold;
+}
+
+@media (max-width: 700px) {
+	.cart_icon .mini_cart .nav_icons .nav-links .right {
+		display: none;
+	}
 }

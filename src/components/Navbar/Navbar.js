@@ -1,10 +1,12 @@
 import React, { Fragment, useState } from "react";
 import { NavLink } from "react-router-dom";
 import logo from "../Logo/logo.png";
+import CurrencyModal from "../Pages/CurrencyModal/CurrencyModal";
 import MiniCart from "../Pages/Cart/MiniCart";
 
 const Navbar = () => {
 	const [minicartIsOpen, setMiniCart] = useState(false);
+	const [currencyModal, setCurrencyModal] = useState(false);
 	return (
 		<header className='container'>
 			<nav className='nav'>
@@ -35,8 +37,8 @@ const Navbar = () => {
 				<img className='logo' alt='Logo' src={logo} />
 			</span>
 			<div>
-				<span className='nav-links'>
-					<i className='fas fa-dollar-sign nav_icons'></i>
+				<span onClick={() => setCurrencyModal(true)} className='nav-links'>
+					<i className='fas fa-dollar-sign nav_icons cart_icon'></i>
 				</span>
 				<span className='nav-links right'>
 					<span onClick={() => setMiniCart(true)}>
@@ -45,6 +47,10 @@ const Navbar = () => {
 				</span>
 			</div>
 			<MiniCart minicartIsOpen={minicartIsOpen} setMiniCart={setMiniCart} />
+			<CurrencyModal
+				currencyModal={currencyModal}
+				setCurrencyModal={setCurrencyModal}
+			/>
 		</header>
 	);
 };

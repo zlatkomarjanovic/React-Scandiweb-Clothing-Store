@@ -1,18 +1,9 @@
 import React, { Fragment } from "react";
 import { useCart } from "react-use-cart";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import Modal from "react-modal";
 const MiniCart = ({ minicartIsOpen, setMiniCart }) => {
-	const {
-		isEmpty,
-		totalItems,
-		items,
-		totalUniqueItems,
-		cartTotal,
-		updateItemQuantity,
-		removeItem,
-		emptyCart,
-	} = useCart();
+	const { totalItems, items, cartTotal, updateItemQuantity } = useCart();
 
 	return (
 		<Modal className='mini_cart' isOpen={minicartIsOpen}>

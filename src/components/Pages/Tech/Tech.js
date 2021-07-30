@@ -1,6 +1,6 @@
 import React, { useEffect, useState, Fragment } from "react";
 import { gql, useQuery } from "@apollo/client";
-import { getDataFromTree } from "@apollo/react-ssr";
+
 import RenderItem from "../RenderItem";
 import ItemDetails from "../ItemDetails";
 import MiniCart from "../Cart/MiniCart";
@@ -32,7 +32,7 @@ const Tech = () => {
 		}
 	`;
 
-	const { error, loading, data } = useQuery(GET_DATA);
+	const { data } = useQuery(GET_DATA);
 	const [stuff, setStuff] = useState([]);
 	const [currentItem, setCurrentItem] = useState(null);
 

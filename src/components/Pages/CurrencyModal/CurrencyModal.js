@@ -11,9 +11,11 @@ const CurrencyModal = ({ currencyModal, setCurrencyModal }) => {
 				>
 					X
 				</button>
-				<h2>$ USD</h2>
-				<h2>€ EUR</h2>
-				<h2>¥ JPY</h2>
+				<div style={{ marginTop: "50px" }}>
+					<h3>$ USD</h3>
+					<h3>€ EUR</h3>
+					<h3>¥ JPY</h3>
+				</div>
 			</div>
 		</Modal>
 	);

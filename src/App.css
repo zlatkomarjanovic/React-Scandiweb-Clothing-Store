@@ -368,12 +368,12 @@ header {
 }
 
 .mini_cart_currency {
-	height: 15rem;
-	width: 10rem;
+	height: 10rem;
+	width: 7rem;
 	overflow: scroll;
 	z-index: 9999;
 	float: right;
-	margin-right: 10rem;
+	margin-right: 20rem;
 	margin-top: 3.5rem;
 	box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
 		rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,

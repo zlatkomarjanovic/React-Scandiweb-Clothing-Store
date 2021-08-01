@@ -17,6 +17,6 @@
 7. useState, useEffect, useQuerry, useCart hooks 
 8. MiniCart with modal
 9. Complete cart functionality 
-10. Complete responsiveness 
+10. Responsiveness with media querries and css grid system
 11. React router 
 12. Items are sorted by categories

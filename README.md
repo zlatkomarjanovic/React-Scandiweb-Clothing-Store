@@ -5,7 +5,9 @@
 2. npm install (for dependencies)<br />
 3. run graphql endpoint on port 4000 (localhost)<br />
 4. npm start the app <br />
-##IMPLEMENTED : 
+
+
+## IMPLEMENTED : 
 1. GraphQL Endpoint
 2. Nothing is hardcoded 
 3. Items that are not in store cannot be ordered 

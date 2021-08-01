@@ -19,3 +19,4 @@
 9. Complete cart functionality 
 10. Complete responsiveness 
 11. React router 
+12. Items are sorted by categories
